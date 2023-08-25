@@ -1,0 +1,137 @@
+<div id="mySlideDiv" style="
+     display: inline-flex;
+    transition: transform 0.2s ease;
+    flex-direction: row;
+">
+    <div style="
+    width: 100%;
+    min-width: 100%;
+    max-width: 400px;
+    padding: 10px;
+">
+        <img src="https://next.travailcleaningservices.com/wp-content/uploads/2023/08/R-2023-08-25T092826.244-e1692945360855.jpg" style="
+    border-radius: 20px;
+">
+    </div>
+<div style="
+    width: 100%;
+    min-width: 100%;
+    max-width: 400px;
+    padding: 10px;
+">
+        <img src="https://next.travailcleaningservices.com/wp-content/uploads/2023/08/R-2023-08-25T092826.244-e1692945360855.jpg" style="
+    border-radius: 20px;
+">
+    </div><div style="
+    width: 100%;
+    min-width: 100%;
+    max-width: 400px;
+    padding: 10px;
+">
+        <img src="https://next.travailcleaningservices.com/wp-content/uploads/2023/08/R-2023-08-25T092826.244-e1692945360855.jpg" style="
+    border-radius: 20px;
+">
+    </div><div style="
+    width: 100%;
+    min-width: 100%;
+    max-width: 400px;
+    padding: 10px;
+">
+        <img src="https://next.travailcleaningservices.com/wp-content/uploads/2023/08/R-2023-08-25T092826.244-e1692945360855.jpg" style="
+    border-radius: 20px;
+">
+    </div></div>
+<script>
+
+slideElement("mySlideDiv",4,100);
+function slideElement(elementID,childCount,percentage){
+var cp = 0;
+const swipeContent = document.getElementById(elementID);
+
+let startX = 0;
+let currentTranslateX = 0;
+
+swipeContent.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    currentTranslateX = parseFloat(window.getComputedStyle(swipeContent).getPropertyValue('transform').split(',')[4]);
+});
+
+swipeContent.addEventListener('touchmove', (e) => {
+    const touchX = e.touches[0].clientX;
+    const deltaX = touchX - startX;
+   
+    
+ let swipeDirection = "left";
+    if (deltaX > 0) {
+
+nxt = 0;
+
+if(cp >= nxt ){
+ return false;
+}else{
+swipeContent.style.transform = `translateX(${currentTranslateX + deltaX}px)`;
+        swipeDirection = "left"; 
+}
+
+  
+    } else if (deltaX < 0) {
+
+nxt = percentage * childCount - percentage;
+
+if(cp <= -(nxt) ){
+
+ 
+}else{
+
+ swipeDirection = "right";
+   swipeContent.style.transform = `translateX(${currentTranslateX + deltaX}px)`;
+}
+    }
+});
+
+swipeContent.addEventListener('touchend', (e) => {
+    const touchX = e.changedTouches[0].clientX;
+    const deltaX = touchX - startX;
+
+    const containerWidth = swipeContent.offsetWidth;
+    const swipePercentage = (deltaX / containerWidth) * 100;
+
+    let swipeDirection = "left";
+    if (deltaX > 0) {
+cp = cp + percentage;
+nxt = percentage * childCount - percentage;
+if(cp >= 0 ){
+swipeContent.style.transform = "translate3d(".concat("0").concat("%,0,0)");
+}else if(cp <= -(nxt)){
+cp = -(nxt) + percentage;
+swipeContent.style.transform = "translate3d(".concat((cp)).concat("%,0,0)");
+}else{
+swipeContent.style.transform = "translate3d(".concat(cp).concat("%,0,0)");
+  }
+        swipeDirection = "left"; 
+    } else if (deltaX < 0) {
+cp = cp - percentage; 
+nxt = percentage * childCount - percentage; 
+if(cp <= -(nxt)){
+
+swipeContent.style.transform = "translate3d(".concat(-(nxt)).concat("%,0,0)");
+}else if(cp >= 0){
+
+cp = -(percentage);
+swipeContent.style.transform = "translate3d(-".concat(percentage).concat("%,0,0)");
+}else{ 
+swipeDirection = "right";
+swipeContent.style.transform = "translate3d(".concat(cp).concat("%,0,0)");
+   }
+    }
+//swipePercentage.toFixed(2)
+    
+    swipeContent.style.transition = 'transform 0.2s ease';
+   // swipeContent.style.transform = `translateX(${currentTranslateX}px)`;
+
+    setTimeout(() => {
+        swipeContent.style.transition = '';
+    }, 200);
+});
+}
+</script>
