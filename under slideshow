@@ -1,0 +1,32 @@
+// Desktop Under slideshow content 
+
+<div class="desktop" style="display: block;">
+<div style="display: flex;padding-top: 20px;place-content: stretch space-evenly;justify-items: center;position: relative;padding-left: 50px;padding-right: 50px;justify-content: flex-start;"><div style="
+    display: inline-block;
+    text-align: center;
+    width: 80px;
+"><img decoding="async" src="https://next.travailcleaningservices.com/wp-content/uploads/2023/08/R-2023-08-25T092826.244-e1692945360855.jpg" style="
+    height: 70px;
+    width: 70px;
+    border-radius: 71px;
+"></div><div style="
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+    /* margin-left: 110px; */
+"><p style="
+    color: black;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0;
+    font-size: 25px;
+">Duane Jones | We are a family pop-rock band</p><p style="
+    font-size: 15px;
+    margin: 0;
+">Los Angeles, CA, United States</p><p style="
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 2px;
+    color: chocolate;
+">#Nature #Super #ExtraOrdinary #Amazing</p></div></div></div>
